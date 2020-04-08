@@ -1,0 +1,205 @@
+body {
+    font-family: 'Amiri', serif;
+}
+
+p, a {
+    font-family: 'Montserrat', san s-serif;
+}
+
+header {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo {
+    align-self: center;
+    font-family: 'Amiri', serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.main-header-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.main-bg-image-container {
+    display: inline-block;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+}
+
+.main-bg-image {
+    background-image: url("surgeon.jpg");
+    background-position: 45px 30px;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.main-header-content {
+    display: inline-block;
+    /* background-color: green; */
+    /* padding: 3em 1em 0 1em; */
+    width: 100%;
+    /* top  right bottom left*/
+}
+
+.main-header-content h1 {
+    background-color: #fff;
+    color: #23383b;
+    font-size: 2.5em;
+    margin: 2em .4em 0 .4em;
+}
+
+.main-header-content p {
+    margin-left: 43%;
+    font-size: .9em;
+    line-height: 1.5em;
+    background-color: #fff;
+    float: left;
+    padding-right: 1em;
+}
+
+.main-header-content h1>span {
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social {
+    position: absolute;
+}
+
+.social {
+    display: none;
+}
+
+header ul {
+    display: none;
+}
+
+.celene-intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3em;
+    color: white;
+    background: #23383b;
+}
+
+.celene-intro h2 {
+    text-align: center;
+}
+
+.celene-intro p {
+    line-height: 1.7em;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background: #23383b;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.docimage {
+    width: 8em;
+    height: 8em;
+    background: url('nozzle.jpg');
+    background-size: cover;
+}
+
+.cta {
+    color: white;
+    text-decoration: none;
+    align-self: center;
+    position: relative;
+    margin: 3em auto;
+    white-space: nowrap;
+}
+
+@media (min-width: 567px) {
+    .main-header-content h1 {
+        text-align: center;
+        font-size: 4rem;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 2em;
+    }
+    .celene-intro-text-container {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 750px) {
+    body {
+        font-size: 18px;
+    }
+    .menu {
+        display: none;
+    }
+    nav ul {
+        display: flex;
+    }
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        /* need to display block to add padding  */
+        padding: .3em .8em;
+        font-size: .9em;
+    }
+    .social {
+        background-color: #eee;
+        padding: .6em;
+        color: white;
+        display: unset;
+        z-index: 1;
+        left: 0;
+        top: 15%;
+        text-align: center;
+    }
+    .social li {
+        margin-bottom: 2em;
+    }
+    .social li img {
+        width: 20px;
+    }
+    .social li:last-child img {
+        width: 10px;
+    }
+    .main-header-content p::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 1em;
+        width: 50%;
+        background: #eee;
+        margin-top: .3em;
+        z-index: -1;
+    }
+    .celene-intro-text-container {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .celene-intro-text-container {
+        max-width: 50%;
+    }
+}
