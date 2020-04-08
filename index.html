@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test page</title>
+    <link rel="stylesheet" href="normalize.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+            /* font-family: 'Montserrat', san s-serif; */
+            /* font-family: 'Lato', sans-serif; */
+        }
+
+        .logo {
+            font-family: 'Amiri', serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+        }
+
+        .main-bg-image {
+            background-image: url("surgeon.jpg");
+            background-position: center;
+            width: 40%;
+            height: 55vh;
+            background-size: cover;
+            left: 0;
+        }
+
+        .main-header-content {
+            /* background-color: green; */
+            padding: 7em 1em 7em 1em;
+
+            /* top  right bottom left*/
+            /* margin-top: 7em;
+            margin-left: -4em;
+            margin-bottom: -4em;
+            margin-right: 8em; */
+            /* padding: 4em;
+            padding-left: 0; */
+        }
+
+        .main-header-content h1 {
+            background-color: #fff;
+            color: #23383b;
+            font-size: 4rem;
+        }
+
+        .main-header-content p {
+            padding-left: 43%;
+            font-size: .9em;
+            line-height: 1.5em;
+        }
+
+
+
+        .main-header-content h1>span {
+            font-weight: normal;
+        }
+
+        p,
+        a {
+            font-family: 'Montserrat', san s-serif;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .social,
+        .main-bg-image {
+            position: absolute;
+        }
+
+        .social {
+            display: none;
+        }
+
+        header {
+            background: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+        }
+
+        header ul {
+            display: none;
+        }
+
+        footer {
+            width: 100%;
+            background: #23383b;
+            display: flex;
+            position: relative;
+        }
+
+        .docimage {
+            width: 8em;
+            height: 8em;
+            background: url('nozzle.jpg');
+            background-size: cover;
+        }
+
+        .cta {
+            color: white;
+            text-decoration: none;
+            align-self: center;
+            position: relative;
+            margin: 3em auto;
+            white-space: nowrap;
+        }
+
+
+
+
+       
+
+        @media (min-width: 567px) {
+            .main-header-content {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .main-header-content h1 {
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 740px) {
+            body {
+                font-size: 18px;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            nav ul {
+                display: flex;
+            }
+
+            nav ul li a {
+                color: black;
+                text-decoration: none;
+                display: block;
+                /* need to display block to add padding  */
+                padding: .3em .8em;
+                font-size: .9em;
+            }
+
+            .social {
+                background-color: #eee;
+                padding: .6em;
+                color: white;
+                display: unset;
+                z-index: 1;
+                left: 0;
+                top: 18%;
+                text-align: center;
+            }
+
+            .social li {
+                margin-bottom: 2em;
+            }
+
+            .social li img {
+                width: 20px;
+            }
+
+            .social li:last-child img {
+                width: 10px;
+            }
+
+            .main-header-content p::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                height: 1em;
+                width: 22%;
+                background: #eee;
+                margin-top: .3em;
+            }
+        }
+
+        @media (min-width: 1440px){
+            .main-header-content p::before {
+                width: 37%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="social">
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/youtube.svg" alt="youtube"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/instagram.svg" alt="instagram"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/twitter.svg" alt="twitter"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/facebook.svg" alt="facebook"></li>
+    </ul>
+
+
+    <header>
+        <a href="#" class="logo">Celene Mulholland, MD</a>
+
+        <nav>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/menu_copy.svg" class="menu" alt="Menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="main-bg-image animated fadeIn"></div>
+
+    <!-- main content -->
+    <div class="main-header-content">
+        <h1 class="animated slideInLeft">Celene Mulholland<span>, MD</span></h1>
+        <p>Neurosurgeon in Pasadena, CA</p>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="docimage"></div>
+        <a href="#" class="cta">Browse buety</a>
+    </footer>
+
+
+
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
