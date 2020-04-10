@@ -230,7 +230,7 @@ a:hover {
     display: none;
 }
 
-header a.logo{
+header a.logo {
     display: none;
 }
 
@@ -245,6 +245,10 @@ header a.logo{
     .celene-intro-text-container {
         max-width: 70%;
     }
+
+    .contact-navbar-mobile{
+        display: none;
+    }
 }
 
 @media (min-width: 750px) {
@@ -254,7 +258,7 @@ header a.logo{
     .desktop-nav {
         display: block;
     }
-    header a.logo{
+    header a.logo {
         display: block;
     }
     .main-bg-image {
@@ -338,5 +342,41 @@ header a.logo{
 @media (min-width: 1200px) {
     .celene-intro-text-container {
         max-width: 50%;
+    }
+}
+
+/* mobile only fixed contact menu */
+
+@media only screen and (max-width: 600px) {
+    .contact-navbar-mobile {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .contact-navbar-mobile a {
+        flex-grow: 1;
+        align-self: center;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: .9em;
+        text-align: center;
+    }
+
+    .contact-navbar-mobile a:first-child{
+        border-right: 1px solid #111;
+        background:green;
+    }
+
+    .contact-navbar-mobile a:hover {
+        background: #ddd;
+        color: black;
     }
 }
