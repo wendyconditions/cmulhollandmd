@@ -21,12 +21,9 @@
         <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/facebook.svg" alt="facebook"></li>
     </ul>
 
-
     <header>
         <a href="#" class="logo">Celene Mulholland, MD</a>
-
         <nav>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/menu_copy.svg" class="menu" alt="Menu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Products</a></li>
@@ -34,8 +31,26 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-
     </header>
+
+    <nav class="mobile-nav">
+        <ul class="menu">
+            <li class="logo"><a href="#">Celene Mulholland, MD</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">Features</a></li>
+            <li class="item"><a href="#">Blog</a></li>
+            <li class="item"><a href="#">Contact</a>
+            </li>
+            <!-- <li class="item button"><a href="#">Log In</a></li>
+            <li class="item button secondary"><a href="#">Sign Up</a></li> -->
+            <!-- <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li> -->
+            <li class="toggle" onclick="myFunction()"><a href="#"><img
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/menu_copy.svg" class="menu"
+                        alt="Menu"></a></li>
+        </ul>
+    </nav>
 
 
     <div class="main-header-container">
@@ -99,33 +114,33 @@
             <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/facebook.svg" alt="facebook"></li>
         </ul>
 
-            <div class="footer-address">
+        <div class="footer-address">
 
-                <p>
-                    <strong>Address</strong>
-                </p>
-                <p>
-                    123 Main Street<br>
-                    Pasadena, CA 91776
-                </p>
+            <p>
+                <strong>Address</strong>
+            </p>
+            <p>
+                123 Main Street<br>
+                Pasadena, CA 91776
+            </p>
 
-                <p>
-                    <strong>Telephone:</strong> <br>(626) 397-5000
-                </p>
-                <p>
-                    <strong>Direct:</strong> <br>(626) 123-4567
-                </p>
+            <p>
+                <strong>Telephone:</strong> <br>(626) 397-5000
+            </p>
+            <p>
+                <strong>Direct:</strong> <br>(626) 123-4567
+            </p>
 
 
 
-            </div>
+        </div>
 
-            <div class="map-data">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.484394147036!2d-118.15433348447831!3d34.133947420866804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c37dd6dc3eb5%3A0x992f69ca3e014edc!2sHuntington%20Hospital!5e0!3m2!1sen!2sus!4v1586391060729!5m2!1sen!2sus"
-                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
-            </div>
+        <div class="map-data">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.484394147036!2d-118.15433348447831!3d34.133947420866804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c37dd6dc3eb5%3A0x992f69ca3e014edc!2sHuntington%20Hospital!5e0!3m2!1sen!2sus!4v1586391060729!5m2!1sen!2sus"
+                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
 
 
         <div class="web-data">
@@ -147,6 +162,39 @@
     <script src="wow.min.js"></script>
     <script>
         new WOW().init();
+    </script>
+
+    <script>
+        function myFunction(e) {
+            var items = document.getElementsByClassName('item');
+            console.log(items)
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].classList.contains('active')) {
+                    items[i].classList.remove('active');
+                } else {
+                    items[i].classList.add('active')
+                }
+            }
+
+            // var x = document.getElementById("myLinks");
+            // if (x.style.display === "block") {
+            //     x.style.display = "none";
+            // } else {
+            //     x.style.display = "block";
+            // }
+        }
+
+        // $(function () {
+        //     $(".toggle").on("click", function () {
+        //         if ($(".item").hasClass("active")) {
+        //             $(".item").removeClass("active");
+        //             // $(this).find("a").html("<i class='fas fa-bars'></i>");
+        //         } else {
+        //             $(".item").addClass("active");
+        //             // $(this).find("a").html("<i class='fas fa-times'></i>");
+        //         }
+        //     });
+        // });
     </script>
 </body>
 
