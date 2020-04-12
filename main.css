@@ -368,6 +368,8 @@ header a.logo {
         text-decoration: none;
         font-size: .9em;
         text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
     .contact-navbar-mobile a:first-child{
